@@ -1,0 +1,19 @@
+DatabaseConfig: &db_config
+  SQLALCHEMY_DATABASE_URI: 'mysql+pymysql://janu:janu1410@localhost:3306/testdb?charset=utf8mb4'
+  MYSQL_DATABASE_CHARSET: 'utf8mb4'
+  SQLALCHEMY_TRACK_MODIFICATIONS: True
+
+CommonConfig: &config
+  <<: *db_config
+
+DevelopmentConfig:
+  <<: *config
+  DEBUG: True
+  TESTING: False
+
+TestingConfig:
+  <<: *config
+  SQLALCHEMY_DATABASE_URI: 'sqlite://'
+  PRESERVE_CONTEXT_ON_EXCEPTION: False
+  DEBUG: False
+  TESTING: True
