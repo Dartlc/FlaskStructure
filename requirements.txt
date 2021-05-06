@@ -9,7 +9,7 @@ arrow==0.15.6
 docutils==0.16
 flasgger==0.9.4
 Flask==1.1.2
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-Dance==3.0.0
 Flask-JWT-Extended==3.24.1
 Flask-Migrate==2.5.3
